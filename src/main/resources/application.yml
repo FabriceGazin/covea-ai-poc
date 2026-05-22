@@ -15,5 +15,6 @@ quarkus:
     layout: stacked
     path: /redoc
   swagger-ui:
+    always-include: true
     enabled: true
     path: /swagger-ui
