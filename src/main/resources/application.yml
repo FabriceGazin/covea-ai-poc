@@ -1,7 +1,6 @@
 quarkus:
   http:
-    port: 8181
-    root-path: /covea
+    port: ${PORT:8080}
   smallrye-openapi:
     info-title: COVEA - Mock APIs
     info-version: 1.0.0
@@ -14,7 +13,7 @@ quarkus:
   redoc:
     always-include: true
     layout: stacked
-    path: /covea/redoc
+    path: /redoc
   swagger-ui:
     enabled: true
-    path: /covea/swagger-ui
+    path: /swagger-ui
