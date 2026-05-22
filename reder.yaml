@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: mon-app-quarkus
+    runtime: java
+    buildCommand: ./mvnw package -DskipTests
+    startCommand: java -jar target/quarkus-app/quarkus-run.jar
+    envVars:
+      - key: JAVA_VERSION
+        value: 25
