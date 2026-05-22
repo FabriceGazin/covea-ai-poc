@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COVEA Mock APIs</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f4f6f9;
+      color: #2c3e50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .badge {
+      background: #e74c3c;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: #7f8c8d;
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+    }
+
+    .card h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #95a5a6;
+      margin-bottom: 1rem;
+    }
+
+    .resource-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .resource-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .resource-list li span.method {
+      background: #eaf4ff;
+      color: #2980b9;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      min-width: 40px;
+      text-align: center;
+    }
+
+    .links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: white;
+      color: #2c3e50;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+
+    .links a:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      transform: translateY(-1px);
+    }
+
+    .warning {
+      font-size: 0.8rem;
+      color: #e67e22;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="badge">Mock Environment</div>
+
+  <h1>COVEA Mock APIs</h1>
+  <p class="subtitle">This service exposes simulated REST APIs for development and testing purposes.<br>No real data is processed or persisted permanently.</p>
+
+  <div class="card">
+    <h2>Available resources</h2>
+    <ul class="resource-list">
+      <li><span class="method">REST</span> <code>/covea/persons</code> — Person management</li>
+      <li><span class="method">REST</span> <code>/covea/policies</code> — Insurance policy management</li>
+      <li><span class="method">REST</span> <code>/covea/claims</code> — Insurance claim management</li>
+    </ul>
+  </div>
+
+  <div class="links">
+    <a href="/swagger-ui" target="_blank">
+      📄 Swagger UI
+    </a>
+    <a href="/openapi" target="_blank">
+      🔗 OpenAPI JSON
+    </a>
+    <a href="/redoc" target="_blank">
+      📚 ReDoc
+    </a>
+  </div>
+
+  <p class="warning">⚠ For testing purposes only — do not use in production</p>
+
+</body>
+</html>

@@ -1,15 +1,11 @@
 ## Stage 1 : build Maven
-FROM maven:3.9-eclipse-temurin-21 AS build
+FROM maven:3.9-eclipse-temurin-25 AS build
 WORKDIR /code
-# Dépendances d'abord (cache Docker)
-COPY pom.xml .
-RUN mvn -B dependency:go-offline -q
-# Source
-COPY src ./src
+COPY . .
 RUN mvn package -DskipTests -q
 
 ## Stage 2 : runtime
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:25-jre
 WORKDIR /app
 COPY --from=build /code/target/quarkus-app/lib/ /app/lib/
 COPY --from=build /code/target/quarkus-app/*.jar /app/

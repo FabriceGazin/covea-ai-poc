@@ -5,7 +5,7 @@ quarkus:
     info-title: COVEA - Mock APIs
     info-version: 1.0.0
     info-description: Mock API to manage persons, policies and claims.
-    path: /covea/openapi
+    path: /openapi
   datasource:
     db-kind: postgresql
     jdbc:
