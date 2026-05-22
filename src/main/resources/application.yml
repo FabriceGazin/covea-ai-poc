@@ -1,0 +1,20 @@
+quarkus:
+  http:
+    port: 8181
+    root-path: /covea
+  smallrye-openapi:
+    info-title: COVEA - Mock APIs
+    info-version: 1.0.0
+    info-description: Mock API to manage persons, policies and claims.
+    path: /covea/openapi
+  datasource:
+    db-kind: postgresql
+    jdbc:
+      url: jdbc:postgresql://ep-still-voice-abeh58fm-pooler.eu-west-2.aws.neon.tech/neondb?user=neondb_owner&password=npg_0fZaTkpx5BWA&sslmode=require&channelBinding=require
+  redoc:
+    always-include: true
+    layout: stacked
+    path: /covea/redoc
+  swagger-ui:
+    enabled: true
+    path: /covea/swagger-ui
